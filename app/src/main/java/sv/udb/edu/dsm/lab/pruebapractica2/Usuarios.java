@@ -28,15 +28,21 @@ public class Usuarios extends AppCompatActivity {
         btnAgregarUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ModeloUsuarios modelousuario;
                 try {
-                    ModeloUsuarios modelousuario = new ModeloUsuarios(-1,etNombreUsuario.getText().toString(),
+                     modelousuario = new ModeloUsuarios(-1,etNombreUsuario.getText().toString(),
                             etApellidoUsuario.getText().toString(),etEmailUsuario.getText().toString(),etUserUsuario.getText().toString(),
                             etPasswordUsuario.getText().toString(),spTipoUsuario.getSelectedItem().toString());
                     Toast.makeText(Usuarios.this, modelousuario.toString(), Toast.LENGTH_SHORT).show();
                 }catch (Exception e ){
                     Toast.makeText(Usuarios.this, "Error Agregar usuario", Toast.LENGTH_SHORT).show();
+                    modelousuario = new ModeloUsuarios(-1,"error",
+                            "error","error","error",
+                            "error","error")  ;
                 }
-
+                AdminSQLiteOpenHelper dbhelper = new AdminSQLiteOpenHelper(Usuarios.this);
+                boolean guardado = dbhelper.agregarUsuario(modelousuario);
+                Toast.makeText(Usuarios.this, "Usuario agregado = "+guardado, Toast.LENGTH_SHORT).show();
             }
         });
         btnModificarUsuario=findViewById(R.id.btnModificarUsuario);

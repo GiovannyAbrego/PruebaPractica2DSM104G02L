@@ -1,5 +1,6 @@
 package sv.udb.edu.dsm.lab.pruebapractica2;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -31,5 +32,20 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
+    public boolean agregarUsuario(ModeloUsuarios usuario) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("nombres", usuario.getNombres());
+        cv.put("apellidos", usuario.getApellidos());
+        cv.put("email", usuario.getEmail());
+        cv.put("user", usuario.getUsuario());
+        cv.put("password", usuario.getPassword());
+        cv.put("tipo", usuario.getTipo());
+        long insert = db.insert("usuario", null, cv);
+        if (insert == -1)
+            return false;
+        else
+            return true;
     }
 }
