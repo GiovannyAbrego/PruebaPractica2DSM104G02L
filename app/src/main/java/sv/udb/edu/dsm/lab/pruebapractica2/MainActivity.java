@@ -16,9 +16,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
     public void onClickLogin(View v){
-
+        Intent llamar = new Intent(MainActivity.this,Admin.class);
+        startActivity(llamar);
     }
     public void onClickSignUp(View v){
         Intent llamar = new Intent(this,Usuarios.class);
