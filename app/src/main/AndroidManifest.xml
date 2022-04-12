@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PruebaPractica2">
         <activity
+            android:name=".Usuarios"
+            android:exported="false" />
+        <activity
+            android:name=".Automoviles"
+            android:exported="false" />
+        <activity
+            android:name=".TipoAutomoviles"
+            android:exported="false" />
+        <activity
+            android:name=".Marcas"
+            android:exported="false" />
+        <activity
+            android:name=".Colores"
+            android:exported="false" />
+        <activity
+            android:name=".Admin"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

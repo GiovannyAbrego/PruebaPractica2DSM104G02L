@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Automoviles">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Modelo Automovil"
+                android:id="@+id/etModeloAutomovil"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Numero de vin"
+                android:id="@+id/etNumeroVin"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Numero chasis"
+                android:id="@+id/etNumeroChasis"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Numero motor"
+                android:id="@+id/etNumeroMotor"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Numero Asientos"
+                android:inputType="number"
+                android:id="@+id/etNumeroAsientos"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Año"
+                android:inputType="number"
+                android:id="@+id/etAnio"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Capacidad Asientos"
+                android:inputType="number"
+                android:id="@+id/etCapacidadAsientos"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Precio"
+                android:inputType="numberDecimal"
+                android:id="@+id/etPrecio"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="URI IMG"
+                android:id="@+id/etUriImg"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Descripcion"
+                android:id="@+id/etDescripcionAutomovil"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/spMarcas"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/spTipoAuto"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/spColores"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Agregar"
+                android:id="@+id/btnAgregarAutomovil"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Modificar"
+                android:id="@+id/btnModificarAutomovil"/>
+
+            <Button
+                android:id="@+id/btnEliminarAutomovil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eliminar"/>
+            <Button
+                android:id="@+id/btnVerAutomovil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver Automoviles"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rvListadoAutomovil"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

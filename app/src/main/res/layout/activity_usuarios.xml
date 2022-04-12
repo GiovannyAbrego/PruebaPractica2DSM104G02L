@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Usuarios">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+            android:padding="10dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+            <EditText
+                android:id="@+id/etNombreUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Nombres" />
+
+            <EditText
+                android:id="@+id/etApellidoUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Apellidos" />
+
+            <EditText
+                android:id="@+id/etEmailUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:hint="Email" />
+
+            <EditText
+                android:id="@+id/etUserUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Usuario" />
+
+            <EditText
+                android:id="@+id/etPasswordUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="Contraseña"/>
+
+            <Spinner
+                android:id="@+id/spTipoUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnAgregarUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agregar" />
+
+            <Button
+                android:id="@+id/btnModificarUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modificar" />
+
+            <Button
+                android:id="@+id/btnEliminarUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eliminar" />
+
+            <Button
+                android:id="@+id/btnVerUsuarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver Usuarios" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rvListadoUsuarios"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
